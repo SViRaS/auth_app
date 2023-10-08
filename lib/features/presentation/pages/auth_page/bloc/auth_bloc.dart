@@ -22,16 +22,3 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     });
   }
 }
-
-      // try {
-      //   bool isAuthenticated = await repository.auth(event.email, event.password);
-      //   if(isAuthenticated == true) {
-      //     emit(AuthSuccess(event.email));
-      //     print('1');
-      //   } else {
-      //      emit(AuthFailure("Неверный логин или пароль!",));
-      //     print('2');
-      //   }
-      // } catch (e) {
-      //     AuthFailure("Ошибка при аутентификации! -> $e", );
-      // }

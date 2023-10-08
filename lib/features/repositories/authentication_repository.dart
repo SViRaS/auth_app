@@ -1,14 +1,15 @@
+import 'package:dio/dio.dart';
 import 'package:firebase/features/repositories/abstract_authentication_repository.dart';
-import 'package:http/http.dart' as http;
 
- class AuthenticationRepository implements AbstractAuthenticationRepository{
-  
+class AuthenticationRepository implements AbstractAuthenticationRepository {
+  final Dio _dio = Dio();
+
   @override
-   Future<bool> auth(String email, password) async {
+  Future<bool> auth(String email, password) async {
     try {
-      final response = await http.post(
-        Uri.parse('http://45.10.110.181:8080/api/v1/auth/login'),
-        body: {
+      final response = await _dio.post(
+        'http://45.10.110.181:8080/api/v1/auth/login',
+        data: {
           'email': email,
           'password': password,
         },
