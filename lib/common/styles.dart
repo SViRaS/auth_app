@@ -27,30 +27,50 @@ class AppStyles {
   );
 
   final profileNameStyle = TextStyle(
-      fontSize: 24.sp,
-      height: 40 / 24,
-      fontFamily: 'Manrope',
-      fontWeight: FontWeight.w600,
-      color: AppColors.blackColor);
+    fontSize: 24.sp,
+    height: 40 / 24,
+    fontFamily: 'Manrope',
+    fontWeight: FontWeight.w600,
+    color: AppColors.blackColor,
+    );
 
   final profileEmailStyle = TextStyle(
-      fontSize: 16.sp,
-      height: 21.86 / 16,
-      fontFamily: 'Manrope',
-      fontWeight: FontWeight.w400,
-      color: AppColors.lightGreyColor);
+    fontSize: 16.sp,
+    height: 21.86 / 16,
+    fontFamily: 'Manrope',
+    fontWeight: FontWeight.w400,
+    color: AppColors.lightGreyColor,
+    );
 
   final exitStyle = TextStyle(
-      fontSize: 16.sp,
-      height: 21.86 / 16,
-      fontFamily: 'Manrope',
-      fontWeight: FontWeight.w400,
-      color: AppColors.redColor);
+    fontSize: 16.sp,
+    height: 21.86 / 16,
+    fontFamily: 'Manrope',
+    fontWeight: FontWeight.w400,
+    color: AppColors.redColor,
+    );
 
   final errorStyle = TextStyle(
-      fontSize: 16.sp,
-      height: 24 / 16,
-      color: AppColors.whiteColor,
-      fontFamily: 'Manrope',
-      fontWeight: FontWeight.w500);
+    fontSize: 16.sp,
+    height: 24 / 16,
+    color: AppColors.whiteColor,
+    fontFamily: 'Manrope',
+    fontWeight: FontWeight.w500,
+    );
+
+  final selectedStyle = TextStyle(
+    fontSize: 10.sp,
+    height: 13.66 / 10,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Manrope',
+    color: AppColors.blackColor,
+  );
+
+  final unselectedStyle = TextStyle(
+    fontSize: 10.sp,
+    height: 13.66 / 10,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Manrope',
+    color: AppColors.blackColor,
+  );
 }

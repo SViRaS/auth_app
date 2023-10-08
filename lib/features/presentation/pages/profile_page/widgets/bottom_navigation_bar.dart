@@ -19,13 +19,6 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
     });
   }
 
-  // final List<Widget> _widgetOptions = [
-  //   Text('Lenta Screen'),
-  //   Text('Map Screen'),
-  //   Text('Favorite Screen'),
-  //   ProfilePage(email: '',),
-  // ];
-
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
@@ -35,21 +28,10 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
         unselectedFontSize: 10.sp,
         type: BottomNavigationBarType.fixed,
         unselectedItemColor: AppColors.blackColor,
+        selectedItemColor: AppColors.purpleColor,
         showUnselectedLabels: true,
-        selectedLabelStyle: TextStyle(
-          fontSize: 10.sp,
-          height: 13.66 / 10,
-          fontFamily: 'Manrope',
-          fontWeight: FontWeight.w400,
-          color: AppColors.blackColor,
-        ),
-        unselectedLabelStyle: TextStyle(
-          fontSize: 10.sp,
-          height: 13.66 / 10,
-          fontFamily: 'Manrope',
-          fontWeight: FontWeight.w400,
-          color: AppColors.blackColor,
-        ),
+        selectedLabelStyle: AppStyles().selectedStyle,
+        unselectedLabelStyle: AppStyles().unselectedStyle,
         items: [
           BottomNavigationBarItem(
               icon: SvgPicture.asset(
