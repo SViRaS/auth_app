@@ -11,19 +11,20 @@ class AuthPage extends StatefulWidget {
   State<AuthPage> createState() => _AuthPageState();
 }
 
-final TextEditingController emailController = TextEditingController();
-final TextEditingController passwordController = TextEditingController();
-
-String get _email => emailController.text;
-String get _password => passwordController.text;
-
-@override
-void dispose() {
-  emailController.dispose();
-  passwordController.dispose();
-}
-
 class _AuthPageState extends State<AuthPage> {
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
+  String get _email => emailController.text;
+  String get _password => passwordController.text;
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,8 +67,12 @@ class _AuthPageState extends State<AuthPage> {
                     );
                   } else {
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                      backgroundColor: AppColors.redColor,
-                        content: Center(child: Text('Неверный логин или пароль', style: TextStyle(fontSize: 16.sp, height: 24 / 16, color: AppColors.whiteColor, fontFamily: 'Manrope', fontWeight: FontWeight.w500),))));
+                        backgroundColor: AppColors.redColor,
+                        content: Center(
+                            child: Text(
+                          'Неверный логин или пароль!',
+                          style: AppStyles().errorStyle,
+                        ))));
                   }
                 });
               },

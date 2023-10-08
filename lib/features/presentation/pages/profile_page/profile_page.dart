@@ -1,9 +1,10 @@
+import 'package:firebase/features/presentation/pages/profile_page/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../common/common.dart';
 
 class ProfilePage extends StatelessWidget {
-  final String email;
+  final String? email;
   const ProfilePage({required this.email, super.key});
   
 
@@ -32,7 +33,7 @@ class ProfilePage extends StatelessWidget {
         SizedBox(
           height: 8.h,
         ),
-        Text(email, style: AppStyles().profileEmailStyle),
+        Text(email!, style: AppStyles().profileEmailStyle),
         SizedBox(
           height: 24.h,
         ),
@@ -54,6 +55,7 @@ class ProfilePage extends StatelessWidget {
           ),
         )
       ]),
+      bottomNavigationBar: const BottomNavigationBarWidget(),
     );
   }
 }
