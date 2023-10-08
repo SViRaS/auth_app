@@ -3,5 +3,5 @@ import '../features/presentation/pages/auth_page/view.dart';
 
 final routes = {
   '/': (context) => const AuthPage(),
-  // 'profile': (context) => const ProfilePage(),
+  // 'profile': (context) => const ProfilePage(email: ,),
 };

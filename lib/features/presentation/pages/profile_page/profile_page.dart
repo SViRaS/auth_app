@@ -6,13 +6,14 @@ import '../../../../common/common.dart';
 class ProfilePage extends StatelessWidget {
   final String? email;
   const ProfilePage({required this.email, super.key});
-  
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
+        bottomOpacity: 0.0,
+        elevation: 0.0,
         backgroundColor: Colors.white,
         title: Text(
           'Профиль',
@@ -46,10 +47,10 @@ class ProfilePage extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(left: 24.w),
                 child: GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, '/');
-                  },
-                  child: Text('Выйти', style: AppStyles().exitStyle)),
+                    onTap: () {
+                      Navigator.pushNamed(context, '/');
+                    },
+                    child: Text('Выйти', style: AppStyles().exitStyle)),
               ),
             ],
           ),

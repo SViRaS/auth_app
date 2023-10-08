@@ -34,6 +34,8 @@ class _AuthPageState extends State<AuthPage> {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
+        bottomOpacity: 0.0,
+        elevation: 0.0,
         backgroundColor: Colors.white,
         title: Text(
           'Авторизация',
@@ -90,22 +92,3 @@ class _AuthPageState extends State<AuthPage> {
     );
   }
 }
-
-
-// BlocBuilder<AuthBloc, AuthState>(
-      //   bloc: authBloc,
-      //   builder: (context, state) {
-      //     if (state is AuthLoading) {
-      //       return const Center(child: CircularProgressIndicator());
-      //     } else if (state is AuthenticationState) {
-      //       return  ProfilePage(email: _email);
-      //     } else if (state is AuthFailure) {
-      //       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      //         backgroundColor: AppColors.redColor,
-      //         content: Center(
-      //             child: Text(
-      //           'Неверный логин или пароль!',
-      //           style: AppStyles().errorStyle,
-      //         )),
-      //       ));
-      //     }
