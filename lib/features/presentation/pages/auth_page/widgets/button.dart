@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../../../common/common.dart';
 
 class ButtonWidget extends StatelessWidget {
@@ -19,12 +17,7 @@ class ButtonWidget extends StatelessWidget {
         child: Center(
           child: Text(
             name,
-            style: TextStyle(
-                color: AppColors.cleanWhiteColor,
-                fontWeight: FontWeight.w700,
-                fontFamily: 'Manrope',
-                fontSize: 16.sp,
-                height: 24 / 16),
+            style: AppStyles().buttonStyle,
           ),
         ),
       ),

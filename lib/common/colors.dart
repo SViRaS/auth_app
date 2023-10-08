@@ -8,4 +8,6 @@ class AppColors {
   static const thinkGreyColor = Color(0xFFC3C3C3);
   static const purpleColor = Color(0xFF4631D2);
   static const blackColor = Color(0xFF000000);
+  static const lightGreyColor = Color(0xFF929292);
+  static const redColor = Color(0xFFEC3A4D);
 }
